@@ -22,6 +22,6 @@ it('hero should have a favourite food', function() {
   assert.strictEqual(hero.favouriteFood, 'strawberry');
 })
 
-it('hero should be able to say her name', function() {
+it('hero should be able to say his name', function() {
   assert.strictEqual(hero.sayName(), 'My name is Noah.');
 })

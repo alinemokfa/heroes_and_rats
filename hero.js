@@ -9,4 +9,13 @@ Hero.prototype.sayName = function() {
   return `My name is ${this.name}.`
 }
 
+Hero.prototype.addTask = function(task) {
+   this.tasks.push(task);
+ }
+
+
+
+
+
+
 module.exports = Hero;
