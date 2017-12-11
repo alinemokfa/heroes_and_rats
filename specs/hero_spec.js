@@ -7,6 +7,7 @@ const assert = require('assert')
 describe('Hero', function() {
   let hero;
   let strawberry;
+  let banana;
   let buyTickets;
 
 });
@@ -14,6 +15,7 @@ describe('Hero', function() {
 beforeEach(function() {
   hero = new Hero('Noah', 80, 'strawberry', []);
   strawberry = new Food('strawberry', 3);
+  banana = new Food('banana', 2);
   buyTickets = new Task(2, 1, 'go home', false);
 });
 
@@ -43,6 +45,11 @@ it('hero should be able to add tasks', function () {
 })
 
 it('hero should be able to eat and update health', function() {
+  hero.eat(banana);
+  assert.strictEqual(hero.health, 82);
+})
+
+it('hero\'s health should go up by 1.5* when favourite food is ingested', function() {
   hero.eat(strawberry);
-  assert.strictEqual(hero.health, 83);
+  assert.strictEqual(hero.health, 84.5);
 })

@@ -10,15 +10,16 @@ Hero.prototype.sayName = function() {
 }
 
 Hero.prototype.addTask = function(task) {
-   this.tasks.push(task);
- }
+  this.tasks.push(task);
+}
 
- Hero.prototype.eat = function(food) {
-   let replenishment = food.replenishmentValue;
-   if (this.favouriteFood === food.name) {
-     this.health += (replenishment);
-   }
- }
+Hero.prototype.eat = function(food) {
+ let replenishment = food.replenishmentValue;
+ if (this.favouriteFood === food.name) {
+  this.health += (1.5 * replenishment);
+ } else {
+ this.health += replenishment;}
+}
 
 
 
