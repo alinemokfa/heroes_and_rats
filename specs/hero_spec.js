@@ -25,3 +25,7 @@ it('hero should have a favourite food', function() {
 it('hero should be able to say his name', function() {
   assert.strictEqual(hero.sayName(), 'My name is Noah.');
 })
+
+it('tasks array starts empty', function() {
+  assert.strictEqual(hero.tasks.length, 0);
+})
