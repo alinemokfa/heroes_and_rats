@@ -13,6 +13,12 @@ Hero.prototype.addTask = function(task) {
    this.tasks.push(task);
  }
 
+ Hero.prototype.eat = function(food) {
+   let replenishment = food.replenishmentValue;
+   if (this.favouriteFood === food.name) {
+     this.health += (replenishment);
+   }
+ }
 
 
 
